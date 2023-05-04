@@ -1,28 +1,28 @@
 CREATE DATABASE sof3021_demo;
 
+GO
 USE sof3021_demo;
-
 GO
 
-CREATE TABLE dong_vat (
-	id uniqueidentifier DEFAULT newid() NOT NULL,
-	ma varchar(20) NOT NULL,
-	ten nvarchar(50) NULL,
-	can_nang int NULL,
-	gioi_tinh bit NULL,
-	khu_vuc_song nvarchar(100) NULL,
-	nam_sinh int NULL,
-	CONSTRAINT dong_vat_PK PRIMARY KEY (id),
-	CONSTRAINT dong_vat_UN UNIQUE (ma)
-);
+CREATE TABLE may_tinh(
+	id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+	ma varchar(100),
+	ten nvarchar(100),
+	gia float,
+	bo_nho nvarchar(100),
+	mau_sac nvarchar(100),
+	hang nvarchar(100),
+	mieu_ta nvarchar(100)
+)
 
-GO 
-INSERT INTO sof3021_demo.dbo.dong_vat
-(id, ma, ten, can_nang, gioi_tinh, khu_vuc_song, nam_sinh)
-VALUES(N'A9B3DEC6-387F-498A-9AA5-4D986A2EA79C', N'DV02', N'Cá', 2, 0, N'Dưới nước', 1995);
-INSERT INTO sof3021_demo.dbo.dong_vat
-(id, ma, ten, can_nang, gioi_tinh, khu_vuc_song, nam_sinh)
-VALUES(N'F8F4BB0D-628E-439A-AC69-A1B90E748B80', N'DV03', N'Chó', 15, 0, N'Trong Nhà', 2001);
-INSERT INTO sof3021_demo.dbo.dong_vat
-(id, ma, ten, can_nang, gioi_tinh, khu_vuc_song, nam_sinh)
-VALUES(N'D4085A6E-AB73-4F5F-A0E7-D3A1DC40B0BF', N'DV01', N'Mèo', 10, 1, N'Trong Nhà', 2000);
+INSERT INTO may_tinh (ma, ten, gia, bo_nho, mau_sac, hang, mieu_ta) VALUES
+	('MT1', 'Idea Pad Slim', 18000000, N'512GB', N'Xám', N'Lenovo', N'Laptop văn phòng'),
+	('MT2', 'Aspire 3', 11500000, N'256GB', N'Trắng', N'Acer', N'Laptop văn phòng'),
+	('MT3', 'Vostro 5620', 15000000, N'512GB', N'Xanh', N'Dell', N'Laptop văn phòng'),
+	('MT4', 'Nitro 5 Eagle', 22000000, N'512GB', N'Xám', N'Acer', N'Laptop gamming'),
+	('MT5', 'Predator Helios 300', 42000000, N'1TB', N'Đen', N'Acer', N'Laptop gamming'),
+	('MT6', 'Inspiron 3520', 19000000, N'256GB', N'Xanh', N'Dell', N'Laptop văn phòng'),
+	('MT7', 'G15 5520', 38000000, N'512GB', N'Đen', N'Dell', N'Laptop gamming'),
+	('MT8', 'Legion 5', 25000000, N'512GB', N'Xám', N'Lenovo', N'Laptop gamming'),
+	('MT9', 'Thinkpad T15S', 24000000, N'1TB', N'Đen', N'Lenovo', N'Laptop văn phòng'),
+	('MT10', 'S14 G3', 16000000, N'512GB', N'Xám', N'Lenovo', N'Laptop văn phòng')
