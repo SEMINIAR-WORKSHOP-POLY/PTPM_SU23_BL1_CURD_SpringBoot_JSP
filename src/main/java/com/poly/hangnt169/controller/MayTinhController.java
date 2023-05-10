@@ -1,6 +1,8 @@
 package com.poly.hangnt169.controller;
 
+import com.poly.hangnt169.entity.Hang;
 import com.poly.hangnt169.entity.MayTinh;
+import com.poly.hangnt169.repository.HangRepository;
 import com.poly.hangnt169.repository.MayTinhRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +26,12 @@ public class MayTinhController {
     @Autowired
     private MayTinhRepository mayTinhRepository;
 
+    @Autowired
+    private HangRepository hangRepository;
+
     @GetMapping("hien-thi")
     public String getAll(@RequestParam(defaultValue = "0", name = "page") int number, Model model) {
-        Pageable pageable = PageRequest.of(number, 5);
+        Pageable pageable = PageRequest.of(number, 2);
         Page<MayTinh> listMayTinh = mayTinhRepository.findAll(pageable);
         model.addAttribute("listMayTinh", listMayTinh);
         return "index";
@@ -57,8 +62,9 @@ public class MayTinhController {
     @PostMapping("add")
     public String addMayTinh(@RequestParam("ma") String ma, @RequestParam("ten") String ten,
                              @RequestParam("gia") String gia, @RequestParam("boNho") String boNho,
-                             @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hang,
+                             @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hangID,
                              @RequestParam("moTa") String moTa) {
+        Hang hang = hangRepository.findById(UUID.fromString(hangID)).orElse(null);
         MayTinh mayTinh = MayTinh.builder()
                 .ma(ma)
                 .boNho(boNho)
@@ -75,8 +81,9 @@ public class MayTinhController {
     @PostMapping("update")
     public String updateMayTinh(@RequestParam("id") String id, @RequestParam("ma") String ma, @RequestParam("ten") String ten,
                                 @RequestParam("gia") String gia, @RequestParam("boNho") String boNho,
-                                @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hang,
+                                @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hangID,
                                 @RequestParam("moTa") String moTa) {
+        Hang hang = hangRepository.findById(UUID.fromString(hangID)).orElse(null);
         MayTinh mayTinh = MayTinh.builder()
                 .ma(ma)
                 .boNho(boNho)

@@ -33,8 +33,12 @@
             <span>${mayTinh.mauSac}</span>
         </div>
         <div class="mb-3">
-            <label class="form-label">Hãng </label>
-            <span>${mayTinh.hang}</span>
+            <label class="form-label">Mã Hãng </label>
+            <span>${mayTinh.hang.ma}</span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tên Hãng </label>
+            <span>${mayTinh.hang.tenHang}</span>
         </div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>

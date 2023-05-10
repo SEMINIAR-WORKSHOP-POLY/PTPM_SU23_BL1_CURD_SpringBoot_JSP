@@ -11,7 +11,7 @@
 <body>
 <header><h2 style="text-align: center;">Quản Lý Máy Tính</h2></header>
 <main>
-    <section>
+    <section class="container">
         <a class="btn btn-success" href="/may-tinh/view-add">Add</a>
     </section>
     <section>
@@ -19,12 +19,13 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Mã</th>
+                    <th scope="col">Mã máy tính</th>
                     <th scope="col">Tên</th>
                     <th scope="col">Giá</th>
                     <th scope="col">Bộ nhớ</th>
                     <th scope="col">Màu sắc</th>
-                    <th scope="col">Hãng</th>
+                    <th scope="col">Mã hãng</th>
+                    <th scope="col">Tên máy tính</th>
                     <th scope="col">Mô Tả</th>
                     <th scope="col">hành động</th>
                 </tr>
@@ -37,7 +38,8 @@
                         <td>${mayTinh.gia}</td>
                         <td>${mayTinh.boNho }</td>
                         <td>${mayTinh.mauSac }</td>
-                        <td>${mayTinh.hang}</td>
+                        <td>${mayTinh.hang.ma}</td>
+                        <td>${mayTinh.hang.tenHang}</td>
                         <td>${mayTinh.mieuTa}</td>
                         <td>
                             <a class="btn btn-success" href="/may-tinh/detail/${mayTinh.id}">detail</a>

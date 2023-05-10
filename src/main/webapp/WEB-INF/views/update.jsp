@@ -39,8 +39,8 @@
             <input type="radio" name="mauSac" value="Bạc" ${mayTinh.mauSac == "Bạc" ? "checked" : ""}>Bạc
         </div>
         <div class="mb-3">
-            <label class="form-label">Hãng </label>
-            <input type="text" class="form-control" name="hang" value="${mayTinh.hang}">
+            <label class="form-label">ID Hãng </label>
+            <input type="text" class="form-control" name="hang" value="${mayTinh.id}">
         </div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>

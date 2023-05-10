@@ -26,7 +26,6 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Bộ nhớ </label>
-            <input type="text" class="form-control" name="boNho">
             <select name="boNho">
                 <option value="128GB">128GB</option>
                 <option value="256GB">256GB</option>
@@ -40,7 +39,7 @@
             <input type="radio" name="mauSac" value="Bạc">Bạc
         </div>
         <div class="mb-3">
-            <label class="form-label">Hãng </label>
+            <label class="form-label">ID Hãng </label>
             <input type="text" class="form-control" name="hang">
         </div>
         <div class="mb-3">
