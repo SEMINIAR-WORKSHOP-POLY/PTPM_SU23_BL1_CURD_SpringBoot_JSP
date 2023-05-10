@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.UUID;
-
 @Controller
 @RequestMapping("/may-tinh/")
 public class MayTinhController {
@@ -39,7 +37,7 @@ public class MayTinhController {
 
     @GetMapping("detail/{id}")
     public String detail(@PathVariable("id") String id, Model model) {
-        MayTinh mayTinh = mayTinhRepository.findById(UUID.fromString(id)).orElse(null);
+        MayTinh mayTinh = mayTinhRepository.findById(Long.valueOf(id)).orElse(null);
         Pageable pageable = PageRequest.of(0, 5);
         Page<MayTinh> listMayTinh = mayTinhRepository.findAll(pageable);
         model.addAttribute("mayTinh", mayTinh);
@@ -49,7 +47,7 @@ public class MayTinhController {
 
     @GetMapping("view-update/{id}")
     public String viewUpdate(@PathVariable("id") String id, Model model) {
-        MayTinh mayTinh = mayTinhRepository.findById(UUID.fromString(id)).orElse(null);
+        MayTinh mayTinh = mayTinhRepository.findById(Long.valueOf(id)).orElse(null);
         model.addAttribute("mayTinh", mayTinh);
         return "update";
     }
@@ -64,7 +62,7 @@ public class MayTinhController {
                              @RequestParam("gia") String gia, @RequestParam("boNho") String boNho,
                              @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hangID,
                              @RequestParam("moTa") String moTa) {
-        Hang hang = hangRepository.findById(UUID.fromString(hangID)).orElse(null);
+        Hang hang = hangRepository.findById(Long.valueOf(hangID)).orElse(null);
         MayTinh mayTinh = MayTinh.builder()
                 .ma(ma)
                 .boNho(boNho)
@@ -83,7 +81,7 @@ public class MayTinhController {
                                 @RequestParam("gia") String gia, @RequestParam("boNho") String boNho,
                                 @RequestParam("mauSac") String mauSac, @RequestParam("hang") String hangID,
                                 @RequestParam("moTa") String moTa) {
-        Hang hang = hangRepository.findById(UUID.fromString(hangID)).orElse(null);
+        Hang hang = hangRepository.findById(Long.valueOf(hangID)).orElse(null);
         MayTinh mayTinh = MayTinh.builder()
                 .ma(ma)
                 .boNho(boNho)
@@ -93,7 +91,7 @@ public class MayTinhController {
                 .mauSac(mauSac)
                 .mieuTa(moTa)
                 .build();
-        MayTinh findMayTinh = mayTinhRepository.findById(UUID.fromString(id)).orElse(null);
+        MayTinh findMayTinh = mayTinhRepository.findById(Long.valueOf(id)).orElse(null);
         mayTinh.setId(findMayTinh.getId());
         BeanUtils.copyProperties(mayTinh, findMayTinh);
         mayTinhRepository.save(findMayTinh);
@@ -102,7 +100,7 @@ public class MayTinhController {
 
     @GetMapping("delete/{id}")
     public String delete(@PathVariable("id") String id) {
-        mayTinhRepository.deleteById(UUID.fromString(id));
+        mayTinhRepository.deleteById(Long.valueOf(id));
         return "redirect:/may-tinh/hien-thi";
     }
 

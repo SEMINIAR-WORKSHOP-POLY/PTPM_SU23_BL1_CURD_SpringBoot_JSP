@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface MayTinhRepository extends JpaRepository<MayTinh, UUID> {
+public interface MayTinhRepository extends JpaRepository<MayTinh, Long> {
 }

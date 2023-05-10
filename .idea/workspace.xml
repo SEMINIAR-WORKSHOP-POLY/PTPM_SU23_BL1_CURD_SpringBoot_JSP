@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd75376a-a357-43e5-81e6-c6c508bb7254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/repository/HangRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/controller/MayTinhController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/controller/MayTinhController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/entity/Hang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/entity/Hang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/entity/MayTinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/entity/MayTinh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/repository/HangRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/repository/HangRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/repository/MayTinhRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/poly/hangnt169/repository/MayTinhRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/controller/MayTinhController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/controller/MayTinhController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/Hang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/Hang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/MayTinh$MayTinhBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/MayTinh$MayTinhBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/MayTinh.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/poly/hangnt169/entity/MayTinh.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.poly.hangnt169.Hangnt169ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.poly.hangnt169.Hangnt169ApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.poly.hangnt169.Hangnt169ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.poly.hangnt169.Hangnt169ApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +72,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683168226583</updated>
       <workItem from="1683168229403" duration="635000" />
+      <workItem from="1683718209730" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="Finish">
       <created>1683168805733</created>
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683708611622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update">
+      <created>1683710175778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683710175778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +148,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finish" />
@@ -156,12 +160,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/poly/hangnt169/controller/MayTinhController.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/poly/hangnt169/controller/MayTinhController.java</url>
-          <line>76</line>
+          <line>74</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
