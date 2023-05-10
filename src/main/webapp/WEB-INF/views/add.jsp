@@ -26,7 +26,12 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Bộ nhớ </label>
-            <input type="text" class="form-control" name="boNho">
+            <select name="boNho">
+                <option value="128GB">128GB</option>
+                <option value="256GB">256GB</option>
+                <option value="512GB">512GB</option>
+                <option value="1TB">1TB</option>
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Màu sắc </label>
@@ -35,12 +40,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Hãng </label>
-            <select name="hang">
-                <option value="MSI">MSI</option>
-                <option value="ASUS">ASUS</option>
-                <option value="ACER">ACER</option>
-                <option value="DELL">DELL</option>
-            </select>
+            <input type="text" class="form-control" name="hang">
         </div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>

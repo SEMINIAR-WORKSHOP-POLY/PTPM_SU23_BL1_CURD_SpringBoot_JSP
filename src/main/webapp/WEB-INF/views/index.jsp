@@ -19,14 +19,16 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Mã</th>
+                    <th scope="col">STT</th>
+                    <th scope="col">Mã máy tính </th>
                     <th scope="col">Tên</th>
                     <th scope="col">Giá</th>
                     <th scope="col">Bộ nhớ</th>
                     <th scope="col">Màu sắc</th>
-                    <th scope="col">Hãng</th>
+                    <th scope="col">Mã hãng </th>
+                    <th scope="col">Tên hãng</th>
                     <th scope="col">Mô Tả</th>
-                    <th scope="col">hành động</th>
+                    <th scope="col">Hành động</th>
                 </tr>
                 </thead>
                 <tbody>
