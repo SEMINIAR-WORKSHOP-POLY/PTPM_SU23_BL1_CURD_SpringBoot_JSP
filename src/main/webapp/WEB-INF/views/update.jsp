@@ -26,7 +26,12 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Bộ nhớ </label>
-            <input type="text" class="form-control" name="boNho" value="${mayTinh.boNho}">
+            <select name="boNho">
+                <option value="128GB" ${mayTinh.boNho == "128GB" ? "selected" : ""}>128GB</option>
+                <option value="256GB" ${mayTinh.boNho == "256GB" ? "selected" : ""}>256GB</option>
+                <option value="512GB" ${mayTinh.boNho == "512GB" ? "selected" : ""}>512GB</option>
+                <option value="1TB" ${mayTinh.boNho == "1TB" ? "selected" : ""}>1TB</option>
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Màu sắc </label>
@@ -35,12 +40,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Hãng </label>
-            <select name="hang">
-                <option value="MSI" ${mayTinh.hang == "MSI" ? "selected" : ""}>MSI</option>
-                <option value="ASUS" ${mayTinh.hang == "ASUS" ? "selected" : ""}>ASUS</option>
-                <option value="ACER" ${mayTinh.hang == "ACER" ? "selected" : ""}>ACER</option>
-                <option value="DELL" ${mayTinh.hang == "DELL" ? "selected" : ""}>DELL</option>
-            </select>
+            <input type="text" class="form-control" name="hang" value="${mayTinh.hang}">
         </div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>
