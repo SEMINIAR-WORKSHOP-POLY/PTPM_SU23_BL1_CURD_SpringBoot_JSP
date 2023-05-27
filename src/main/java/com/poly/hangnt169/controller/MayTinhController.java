@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/may-tinh/")
 public class MayTinhController {
@@ -48,12 +50,16 @@ public class MayTinhController {
     @GetMapping("view-update/{id}")
     public String viewUpdate(@PathVariable("id") String id, Model model) {
         MayTinh mayTinh = mayTinhRepository.findById(Long.valueOf(id)).orElse(null);
+        List<Hang> hangs = hangRepository.findAll();
         model.addAttribute("mayTinh", mayTinh);
+        model.addAttribute("hangs", hangs);
         return "update";
     }
 
     @GetMapping("view-add")
-    public String view() {
+    public String viewAdd(Model model) {
+        List<Hang> hangs = hangRepository.findAll();
+        model.addAttribute("hangs", hangs);
         return "add";
     }
 

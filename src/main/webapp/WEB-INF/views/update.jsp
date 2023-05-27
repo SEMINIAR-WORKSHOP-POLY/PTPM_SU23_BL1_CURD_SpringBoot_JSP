@@ -39,9 +39,12 @@
             <input type="radio" name="mauSac" value="Bạc" ${mayTinh.mauSac == "Bạc" ? "checked" : ""}>Bạc
         </div>
         <div class="mb-3">
-            <label class="form-label">ID Hãng </label>
-            <input type="text" class="form-control" name="hang" value="${mayTinh.id}">
-        </div>
+            <label class="form-label">Hãng </label>
+            <select name="hang">
+                <c:forEach items="${hangs }" var="h">
+                    <option value="${h.id}" ${h.id == mayTinh.hang.id ? 'selected="selected"' : ''}>${h.tenHang}</option>
+                </c:forEach>
+            </select></div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>
             <input type="text" class="form-control" name="moTa" value="${mayTinh.mieuTa}">
