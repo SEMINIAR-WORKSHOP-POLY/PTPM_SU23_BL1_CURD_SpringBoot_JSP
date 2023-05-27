@@ -40,7 +40,9 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Hãng </label>
-            <input type="text" class="form-control" name="hang">
+            <select name="hang">
+                <option value="256GB">256GB</option>
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Mô tả</label>
