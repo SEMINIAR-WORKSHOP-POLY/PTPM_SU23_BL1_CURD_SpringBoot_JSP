@@ -30,7 +30,13 @@ public class MayTinhController {
     private HangRepository hangRepository;
 
     @GetMapping("hien-thi")
-    public String getAll(@RequestParam(defaultValue = "0", name = "page") int number, Model model) {
+    public String getAll(@RequestParam(defaultValue = "0", name = "page") Integer number, Model model) {
+        // Page => Trang => Noi dung cua 1 trang
+        // 6 phan tu list
+        // 1 : size ( 1 trang muon size = bn) : 4 => 4 phan tu 1/trang
+        // => Page 1: 4 phan tu dau tien => Page = 0
+        // => Page 2: 2 phan tu con lai => Page = 1
+        // 2:  soPage => Trang so may : pageNo
         Pageable pageable = PageRequest.of(number, 2);
         Page<MayTinh> listMayTinh = mayTinhRepository.findAll(pageable);
         model.addAttribute("listMayTinh", listMayTinh);
